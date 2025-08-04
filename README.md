@@ -65,26 +65,13 @@ The study covers data from 2001 to 2022 and includes climatic, landuse, and vegi
 *Figure 2: Left - Taylor diagram of ETa prediction Machine Learning models during the calibration; Right - validation magnitudes*
 
 #### Hyperparameter tuning
-| Model                      | Hyperparameters                                            |
-|----------------------------|------------------------------------------------------------|
-| Random Forest Regressor    | - Max. Depth: None
-                               - Number of Trees: 50
-                               - Min. Samples to Split: 5
-                               - Best Nodes: 20
-                               - Bootstrap Samples: None                                  |
-| Gradient Boosting Regressor| - Learning Rate: 0.1
-                               - Sample Fraction: 0.75
-                               - Boost Stages: 200
-                               - Max. Depth: 6                                            |
-| AdaBoost Regressor         | - Max. Estimators: 50
-                               - Regressor Weight: 0.25
-                               - Loss Function: Linear                                    |
-| Extreme Gradient Boosting  | - Number of boosting rounds: 100
-                               - Maximum depth of a tree: 3
-                               - Step size shrinkage: 0.1
-                               - Minimum loss reduction required to make a further partition on a leaf node: 0.2
-                               - Subsample ratio of the training instances: 1
-                               - Subsample ratio of columns when constructing each tree: 1|
+| Model                      | Hyperparameters |
+|----------------------------|-----------------|
+| Random Forest Regressor    | <ul><li>Max. Depth: None</li><li>Number of Trees: 50</li><li>Min. Samples to Split: 5</li><li>Best Nodes: 20</li><li>Bootstrap Samples: None</li></ul> |
+| Gradient Boosting Regressor| <ul><li>Learning Rate: 0.1</li><li>Sample Fraction: 0.75</li><li>Boost Stages: 200</li><li>Max. Depth: 6</li></ul> |
+| AdaBoost Regressor         | <ul><li>Max. Estimators: 50</li><li>Regressor Weight: 0.25</li><li>Loss Function: Linear</li></ul> |
+| Extreme Gradient Boosting  | <ul><li>Number of boosting rounds: 100</li><li>Maximum depth of a tree: 3</li><li>Step size shrinkage: 0.1</li><li>Minimum loss reduction: 0.2</li><li>Subsample ratio (rows): 1</li><li>Subsample ratio (columns): 1</li></ul> |
+
 
 ## Repository Structure
 
