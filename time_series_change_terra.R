@@ -12,10 +12,10 @@ data <- read_excel(file_path, sheet = "Sheet1")  # Specify the sheet if needed
 data <- data %>%
   select(-c(def, pet)) %>%  # Delete unnecessary columns
   rename(
-    AET = aet,      # Rename `aet` to `AET`
+    ETa = aet,      # Rename `aet` to `AET`
     P = pr,         # Rename `pr` to `P`
     TWSC = delta,   # Rename `delta` to `TWSC`
-    EP = pr_delta,  # Rename `pr_delta` to `EP`
+    Pe = pr_delta,  # Rename `pr_delta` to `EP`
     R = ro          # Rename `ro` to `Q`
   )
 
@@ -52,7 +52,7 @@ ggplot(data_long, aes(x = Year, y = Value, color = Parameter)) +
 # Print the plot
 #print(p)
 
-ggsave("E:/Term2/WERI/ML_Budyko/3- result/edit/fig5/Time_series_Terraclimate_1.png", width = 8, height = 6, dpi = 300)
+ggsave("E:/Term2/WERI/ML_Budyko/3- result/edit/fig5/Time_series_Terraclimate_2.png", width = 8, height = 6, dpi = 300)
 
 
 
