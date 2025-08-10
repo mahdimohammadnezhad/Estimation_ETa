@@ -14,12 +14,18 @@ The project leverages:
 - Model training and validation
 - Feature selection
 - Taylor diagram
+- Hybrid Budyko-Deep learning models
 
 The study covers data from 2001 to 2022 and includes climatic, landuse, and vegitation variables.
 ## Key Results
 
 ### 1. Model Performance
 - **Best Models**:
+  - Wang-Tang-XGB7: NRMSE=0.06, R²=0.90, NSE=0.90, RMSE=3.21 mm
+  - Turk-Pike-XGB7: NRMSE=0.06, R²=0.90, NSE=0.90, RMSE=3.23 mm
+  - Zhang-XGB7: NRMSE=0.06, R²=0.90, NSE=0.90, RMSE=3.27 mm
+  - Fu-XGB7: NRMSE=0.06, R²=0.89, NSE=0.88, RMSE=3.59 mm
+
   - Budyko model (Zhang): NRMSE=0.10, R²=0.78, NSE=0.77
   - Budyko model (Turc-Pike): NRMSE=0.10, R²=0.77, NSE=0.76
   - Budyko model (Fu): NRMSE=0.11, R²=0.77, NSE=0.76
@@ -59,8 +65,8 @@ The study covers data from 2001 to 2022 and includes climatic, landuse, and vegi
 
 #### Evaluation ML Models
 <div style="display: flex; justify-content: space-between;">
-  <img src="ml_train_21Apr_B.png" alt="Train" style="width: 35%; height: auto;">
-  <img src="ml_test_21Apr_B.png" alt="Test" style="width: 35%; height: auto;">
+  <img src="hybrid_train_8Aug.png" alt="Train" style="width: 35%; height: auto;">
+  <img src="hybrid_test_8Aug.png" alt="Test" style="width: 35%; height: auto;">
 </div>
 *Figure 2: Left - Taylor diagram of ETa prediction Machine Learning models during the calibration; Right - validation magnitudes*
 
@@ -75,14 +81,16 @@ The study covers data from 2001 to 2022 and includes climatic, landuse, and vegi
 
 ## Repository Structure
 
-- `Era5_data.ipynb` and `Terra_data.ipynb`: Jupyter notebook for collecting satellite and meteorological data using Google Earth Engine (e.g., TerraClimate, ERA5).
-- `fit_curve_budyko_with_label.R`: Core modeling notebook implementing all 4 Budyko models.
-- `eddy_data.ipynb`: Input preprocessing.
-- `clusster_gridsearchcv.ipynb`: Core modeling notebook implementing all 14 ML models.
-- `plot_obs_sim.ipynb`: Scatter plot for ML and Budyko Models.
-- `taylor_diagram.R`: Taylor Diagram.
-- `SHAP_FI.ipynb`: SHAP analysis.
-- `time_series_change_terra.R`: Time series scatter.
+- `1_1_era5_data.ipynb` and `1_2_terraclimate_data.ipynb`: Jupyter notebook for collecting satellite and meteorological data using Google Earth Engine (e.g., TerraClimate, ERA5).
+- `1_3_eddy_data.ipynb`: Input preprocessing.
+- `2_1_budyko_models.R`: Core modeling notebook implementing all 4 Budyko models.
+- `2_2_ml_models.ipynb`: Core modeling notebook implementing all 14 ML models.
+- `2_3_hybrid_models.ipynb`: Hybrid Budyko-Deep learning models using neural network
+- `3_1_scatter_plots.ipynb`: Scatter plot for ML and Budyko Models.
+- `3_2_taylor_diagram.R`: Taylor Diagram.
+- `3_3_sensitivity_analysis.ipynb`: SHAP analysis.
+- `3_4_time_series_change.R`: Time series scatter.
+
 - `requirements.txt`: List of Python dependencies required to run the code.
 
 ## Prerequisites
@@ -113,6 +121,8 @@ The main Python dependencies include:
 - `geopandas`
 - `shapely`
 - `wxee`
+- `keras`
+- `tensorflow`
 
 ## Setup Instructions
 
