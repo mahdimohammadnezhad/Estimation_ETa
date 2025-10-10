@@ -158,12 +158,12 @@ For support or inquiries:
 
 
 ```bibtex
-@article{mohammadnezhad2025evapotranspiration,
-  title={A Novel Method to Estimate Actual Evapotranspiration using Modified Budyko Model under Data Scarcity Conditions in Arid Regions},
-  author={Mohammadnezhad, Mahdi and Collaborators},
-  journal={Journal Name},
-  volume={XX},
-  pages={XXX--XXX},
+@article{mohammadnezhad2025novel,
+  title={A novel hybrid model for actual evapotranspiration estimation in data-scarce arid regions: Integrating modified Budyko and machine learning models using deep learning},
+  author={Mohammadnezhad, Mahdi and Davary, Kamran and Shirazi, Pooya and Rezvanpour, Mohammad Javad and Hasheminia, Seyed Majid},
+  journal={Science of The Total Environment},
+  volume={1001},
+  pages={180438},
   year={2025},
-  publisher={Publisher}
+  publisher={Elsevier}
 }
